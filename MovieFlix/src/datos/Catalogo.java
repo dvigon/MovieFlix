@@ -10,6 +10,14 @@ public class Catalogo {
 
 	public Catalogo(String categoria) {
 		super();
+		setCategoria(categoria);
+	}
+
+	public String getCategoria() {
+		return Categoria;
+	}
+
+	public void setCategoria(String categoria) {
 		Categoria = categoria;
 	}
 
