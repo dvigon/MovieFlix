@@ -1,6 +1,6 @@
-package Servicios;
+package servicios;
 
-import Datos.Pelicula;
+import datos.Pelicula;
 
 public class ImplementacionPelicula {
 

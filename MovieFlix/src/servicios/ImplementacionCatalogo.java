@@ -1,6 +1,6 @@
-package Servicios;
+package servicios;
 
-import Datos.Catalogo;
+import datos.Catalogo;
 
 public class ImplementacionCatalogo {
 	

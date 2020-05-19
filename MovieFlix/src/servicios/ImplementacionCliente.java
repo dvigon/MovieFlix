@@ -1,6 +1,6 @@
-package Servicios;
+package servicios;
 
-import Datos.Cliente;
+import datos.Cliente;
 
 public class ImplementacionCliente {
 
