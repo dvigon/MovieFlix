@@ -1,9 +1,5 @@
 package control;
 
-import java.io.IOException;
-
-import herramientas.CargarCSV;
-
 /**
  * Clase Main
  * @author David Vigón
@@ -12,7 +8,7 @@ import herramientas.CargarCSV;
 
 public class Main {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args){
 		
 		new MovieFlix().iniciar();
 		
