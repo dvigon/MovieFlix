@@ -22,7 +22,7 @@ public class CargarCSV {
 	ArrayList<String> AñoEstreno = new ArrayList<String>();
 	ArrayList<String> Genero = new ArrayList<String>();
 	
-	// private Connection conexion = new Conexion().getConnection();
+	// private Connection conexion = new Conexion().getConnection();							Comentado hasta que funcione la conexión con la BBDD
 	
 	String archivo = "src\\files\\peliculas_cat.txt";
 	String archivo2 = "src\\files\\peliculas_numCat.txt";
