@@ -17,7 +17,7 @@ public class Conexion {
 	Connection connection = null;
     String BD = "movieflix";
     String driverClassName = "com.mysql.jdbc.Driver";
-    String driverUrl = "jdbc:mysql://10.90.36.105/" + BD;
+    String driverUrl = "jdbc:mysql://10.90.36.105:3306/" + BD +"?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
     String user = "usuario";
     String password = "usuario";
 
