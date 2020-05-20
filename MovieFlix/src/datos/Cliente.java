@@ -28,11 +28,11 @@ public class Cliente {
 
 
 	public int getID() {
-		return ID;
+		return IdCliente;
 	}
 
 	public void setID(int iD) {
-		ID = iD;
+		IdCliente = iD;
 	}
 	
 	public String getNombreCompleto() {

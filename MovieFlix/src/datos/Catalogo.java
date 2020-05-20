@@ -21,11 +21,11 @@ public class Catalogo {
 	}
 
 	public int getID() {
-		return ID;
+		return IdCatalogo;
 	}
 
 	public void setID(int iD) {
-		ID = iD;
+		IdCatalogo = iD;
 	}
 
 	public String getCategoria() {

@@ -15,11 +15,11 @@ public class Conexion {
 	// Conexion a la bbdd
 	
 	Connection connection = null;
-    String BD = "tablas_de_prueba";
+    String BD = "movieflix";
     String driverClassName = "com.mysql.jdbc.Driver";
-    String driverUrl = "jdbc:mysql:///" + BD;
-    String user = "root";
-    String password = "root";
+    String driverUrl = "jdbc:mysql://10.90.36.105/" + BD;
+    String user = "usuario";
+    String password = "usuario";
 
     public Conexion() {
         try {

@@ -23,11 +23,11 @@ public class Pelicula extends Catalogo{
 	}
 
 	public int getID() {
-		return ID;
+		return IdPelicula;
 	}
 
 	public void setID(int iD) {
-		ID = iD;
+		IdPelicula = iD;
 	}
 
 	public String getNombre() {
