@@ -40,7 +40,7 @@ public class ClienteImp implements InterfazCliente{
             String query = "UPDATE Cliente "
                     + "SET nombre='" + cli.getNombreCompleto() + "',"
                     + "fechaRegistro='" + new java.sql.Date( cli.getFechaNacimiento().getTime())
-                    + "WHERE idCliente=" + cli.getID();
+                    + "WHERE idCliente=" + cli.getIdCliente();
             if (stmt.executeUpdate(query) != 1) {
                 System.out.println("Error al modificar el cliente");
             }

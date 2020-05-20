@@ -32,16 +32,15 @@ public class Cliente {
 		NombreCompleto = nombreCompleto;
 		FechaNacimiento = fechaNacimiento;
 	}
-
-
-	public int getID() {
+	
+	public int getIdCliente() {
 		return IdCliente;
 	}
 
-	public void setID(int iD) {
-		IdCliente = iD;
+	public void setIdCliente(int idCliente) {
+		IdCliente = idCliente;
 	}
-	
+
 	public String getNombreCompleto() {
 		return NombreCompleto;
 	}
@@ -62,6 +61,8 @@ public class Cliente {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + ((FechaNacimiento == null) ? 0 : FechaNacimiento.hashCode());
+		result = prime * result + IdCliente;
 		result = prime * result + ((NombreCompleto == null) ? 0 : NombreCompleto.hashCode());
 		return result;
 	}
@@ -75,6 +76,13 @@ public class Cliente {
 		if (getClass() != obj.getClass())
 			return false;
 		Cliente other = (Cliente) obj;
+		if (FechaNacimiento == null) {
+			if (other.FechaNacimiento != null)
+				return false;
+		} else if (!FechaNacimiento.equals(other.FechaNacimiento))
+			return false;
+		if (IdCliente != other.IdCliente)
+			return false;
 		if (NombreCompleto == null) {
 			if (other.NombreCompleto != null)
 				return false;
@@ -87,5 +95,5 @@ public class Cliente {
 	public String toString() {
 		return "Cliente [NombreCompleto=" + NombreCompleto + ", FechaRegistro=" + FechaNacimiento + "]";
 	}
-
+	
 }

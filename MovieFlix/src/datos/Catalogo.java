@@ -20,12 +20,12 @@ public class Catalogo {
 		setCategoria(categoria);
 	}
 
-	public int getID() {
+	public int getIdCatalogo() {
 		return IdCatalogo;
 	}
 
-	public void setID(int iD) {
-		IdCatalogo = iD;
+	public void setIdCatalogo(int idCatalogo) {
+		IdCatalogo = idCatalogo;
 	}
 
 	public String getCategoria() {

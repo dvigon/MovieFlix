@@ -1,6 +1,13 @@
 package servicios;
 
+/**
+ * Implementación de los Clientes
+ * @author David Vigón
+ * Fecha: 20-5-2020
+ */
+
 import datos.Cliente;
+import datos.Catalogo;
 
 public interface ImplementacionCliente {
 
@@ -11,3 +18,4 @@ public interface ImplementacionCliente {
 	public Cliente encontrar(int id);
 	public Cliente[] listaClientes();
 }
+
