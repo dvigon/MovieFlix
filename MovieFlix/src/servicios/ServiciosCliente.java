@@ -33,4 +33,10 @@ public class ServiciosCliente implements ImplementacionCliente{
 	public Cliente[] listaClientes() {
 		return datos.listaClientes();
 	}
+
+	@Override
+	public void datAlta() {
+		// TODO Auto-generated method stub
+		
+	}
 }

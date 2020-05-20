@@ -85,6 +85,4 @@ public class Pelicula extends Catalogo{
 		return "Pelicula [IdPelicula=" + IdPelicula + ", Nombre=" + Nombre + ", AnyoEstreno=" + AnyoEstreno + "]";
 	}
 
-
-
 }

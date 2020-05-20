@@ -14,4 +14,5 @@ public interface InterfazCliente {
 	public void baja(int id);
 	public Cliente encontrar(int id);
 	public Cliente[] listaClientes();
+	
 }
