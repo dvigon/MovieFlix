@@ -20,12 +20,12 @@ public class Catalogo {
 		setCategoria(categoria);
 	}
 
-	public int getID() {
+	public int getIdCatalogo() {
 		return IdCatalogo;
 	}
 
-	public void setID(int IdCatalogo) {
-		this.IdCatalogo = IdCatalogo;
+	public void setIdCatalogo(int idCatalogo) {
+		IdCatalogo = idCatalogo;
 	}
 
 	public String getCategoria() {

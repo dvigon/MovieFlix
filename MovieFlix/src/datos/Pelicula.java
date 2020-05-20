@@ -22,12 +22,12 @@ public class Pelicula extends Catalogo{
 		AnyoEstreno = anyoEstreno;
 	}
 
-	public int getID() {
+	public int getIdPelicula() {
 		return IdPelicula;
 	}
 
-	public void setID(int IdPelicula) {
-		this.IdPelicula = IdPelicula;
+	public void setIdPelicula(int idPelicula) {
+		IdPelicula = idPelicula;
 	}
 
 	public String getNombre() {
@@ -84,5 +84,7 @@ public class Pelicula extends Catalogo{
 	public String toString() {
 		return "Pelicula [IdPelicula=" + IdPelicula + ", Nombre=" + Nombre + ", AnyoEstreno=" + AnyoEstreno + "]";
 	}
+
+
 
 }

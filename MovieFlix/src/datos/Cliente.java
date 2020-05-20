@@ -25,16 +25,15 @@ public class Cliente {
 		CiudadResidencia = ciudadResidencia;
 		FechaNacimiento = fechaNacimiento;
 	}
-
-
-	public int getID() {
+	
+	public int getIdCliente() {
 		return IdCliente;
 	}
 
-	public void setID(int IdCliente) {
-		this.IdCliente = IdCliente;
+	public void setIdCliente(int idCliente) {
+		IdCliente = idCliente;
 	}
-	
+
 	public String getNombreCompleto() {
 		return NombreCompleto;
 	}
