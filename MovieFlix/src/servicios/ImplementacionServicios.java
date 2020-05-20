@@ -1,9 +1,10 @@
 package servicios;
 
 public interface ImplementacionServicios {
-
-	public void start();
-	public void seleccionOpciones();
-	public void salir();
 	
+	public void ConexionBD();
+	public void CargarCSV();
+	public void seleccionOpciones();
+	public void start();
+
 }
