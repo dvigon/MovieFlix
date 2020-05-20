@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 
 /**
- * Conexión a base de datos.
+ * Conexiï¿½n a base de datos.
  * @author ruben
  * Fecha: 20-5-2020
  *

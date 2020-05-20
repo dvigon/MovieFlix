@@ -20,24 +20,6 @@ public class ClienteImp implements InterfazCliente{
 
 	private Connection con = new Conexion().getConnection();
 
-	//metodo para dar de alta a un cliente y a�adirlo a la bd
-	@Override
-	public void darAlta() {
-		
-		String NombreCompleto = LeerDatos.leerString("Introduzca el nombre del cliente: ");
-		Date FechaNacimiento = new Date();
-		
-		try (Statement stmt = con.createStatement()) {
-			String query = "INSERT INTO Cliente VALUES (" + NombreCompleto + "," + FechaNacimiento +")";
-			if (stmt.executeUpdate(query) != 1) {
-				System.out.println("Error al insertar nuevo cliente");  
-			}
-		} catch (SQLException e) {
-			System.out.println(e.getMessage());         
-		}
-		
-	}
-
 	// Método para dar de alta a un cliente y añadirlo a la BBDD
 	@Override
 	public void alta(Cliente cli) {
