@@ -6,6 +6,7 @@ import datos.InterfazCliente;
 
 public class ServiciosCliente implements ImplementacionCliente{
 	
+	//Llamada a los metodos del paquete de datos
 	private InterfazCliente datos = new ClienteImp();
 	
 	@Override

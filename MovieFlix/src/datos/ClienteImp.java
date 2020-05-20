@@ -19,6 +19,7 @@ public class ClienteImp implements InterfazCliente{
 
 	private Connection con = new Conexion().getConnection();
 	
+	//metodo para dar de alta a un cliente y añadirlo a la bd
 	@Override
 	public void alta(Cliente cli) {
 		try (Statement stmt = con.createStatement()) {
@@ -32,6 +33,7 @@ public class ClienteImp implements InterfazCliente{
         }
 	}
 	
+	//metodo para modificar parametros de un cliente
 	@Override
 	public void modificacion(Cliente cli) {
 		try (Statement stmt = con.createStatement()) {
@@ -47,6 +49,7 @@ public class ClienteImp implements InterfazCliente{
         }
 	}
 	
+	//metodo para dar de baja a un cliente y eliminarlo de la bd
 	@Override
 	public void baja(int id) {
 		Cliente cli = encontrar(id);
@@ -63,6 +66,7 @@ public class ClienteImp implements InterfazCliente{
         }
 	}
 	
+	//metodo para buscar clientes mediante su identificador
 	@Override
 	public Cliente encontrar(int id) {
 		try (Statement stmt = con.createStatement()) {
@@ -78,6 +82,7 @@ public class ClienteImp implements InterfazCliente{
         }
 	}
 	
+	//metodo que recoge en un array los clientes que hay
 	@Override
 	public Cliente[] listaClientes(){
 		try (Statement stmt = con.createStatement()) {
