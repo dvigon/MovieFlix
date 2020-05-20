@@ -23,11 +23,11 @@ public class Pelicula extends Catalogo{
 	}
 
 	public int getID() {
-		return ID;
+		return IdPelicula;
 	}
 
-	public void setID(int iD) {
-		ID = iD;
+	public void setID(int IdPelicula) {
+		this.IdPelicula = IdPelicula;
 	}
 
 	public String getNombre() {
@@ -51,6 +51,7 @@ public class Pelicula extends Catalogo{
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((AnyoEstreno == null) ? 0 : AnyoEstreno.hashCode());
+		result = prime * result + IdPelicula;
 		result = prime * result + ((Nombre == null) ? 0 : Nombre.hashCode());
 		return result;
 	}
@@ -69,6 +70,8 @@ public class Pelicula extends Catalogo{
 				return false;
 		} else if (!AnyoEstreno.equals(other.AnyoEstreno))
 			return false;
+		if (IdPelicula != other.IdPelicula)
+			return false;
 		if (Nombre == null) {
 			if (other.Nombre != null)
 				return false;
@@ -79,7 +82,7 @@ public class Pelicula extends Catalogo{
 
 	@Override
 	public String toString() {
-		return "Pelicula [Nombre=" + Nombre + ", AnyoEstreno=" + AnyoEstreno + "]";
+		return "Pelicula [IdPelicula=" + IdPelicula + ", Nombre=" + Nombre + ", AnyoEstreno=" + AnyoEstreno + "]";
 	}
 
 }

@@ -28,11 +28,11 @@ public class Cliente {
 
 
 	public int getID() {
-		return ID;
+		return IdCliente;
 	}
 
-	public void setID(int iD) {
-		ID = iD;
+	public void setID(int IdCliente) {
+		this.IdCliente = IdCliente;
 	}
 	
 	public String getNombreCompleto() {
@@ -64,6 +64,8 @@ public class Cliente {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((CiudadResidencia == null) ? 0 : CiudadResidencia.hashCode());
+		result = prime * result + ((FechaNacimiento == null) ? 0 : FechaNacimiento.hashCode());
+		result = prime * result + IdCliente;
 		result = prime * result + ((NombreCompleto == null) ? 0 : NombreCompleto.hashCode());
 		return result;
 	}
@@ -82,6 +84,13 @@ public class Cliente {
 				return false;
 		} else if (!CiudadResidencia.equals(other.CiudadResidencia))
 			return false;
+		if (FechaNacimiento == null) {
+			if (other.FechaNacimiento != null)
+				return false;
+		} else if (!FechaNacimiento.equals(other.FechaNacimiento))
+			return false;
+		if (IdCliente != other.IdCliente)
+			return false;
 		if (NombreCompleto == null) {
 			if (other.NombreCompleto != null)
 				return false;
@@ -92,7 +101,8 @@ public class Cliente {
 
 	@Override
 	public String toString() {
-		return "Cliente [NombreCompleto=" + NombreCompleto + ", CiudadResidencia=" + CiudadResidencia + "]";
+		return "Cliente [IdCliente=" + IdCliente + ", NombreCompleto=" + NombreCompleto + ", CiudadResidencia="
+				+ CiudadResidencia + ", FechaNacimiento=" + FechaNacimiento + "]";
 	}
-
+	
 }
