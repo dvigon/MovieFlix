@@ -8,7 +8,7 @@ package datos;
 
 public class Pelicula extends Catalogo{
 	
-	private int ID;
+	private int IdPelicula;
 	private String Nombre;
 	private String AnyoEstreno;
 	

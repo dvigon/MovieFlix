@@ -8,7 +8,7 @@ package datos;
 
 public class Catalogo {
 	
-	private int ID;
+	private int IdCatalogo;
 	private String Categoria;
 
 	public Catalogo() {

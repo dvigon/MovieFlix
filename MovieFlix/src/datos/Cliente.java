@@ -10,7 +10,7 @@ import java.util.Date;
 
 public class Cliente {
 
-	private int ID;
+	private int IdCliente;
 	private String NombreCompleto;
 	private String CiudadResidencia;
 	private Date FechaNacimiento;
