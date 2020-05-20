@@ -1,7 +1,14 @@
 package datos;
 
+/**
+ * Clase Película
+ * @author David Vigón
+ * Fecha: 19-5-2020
+ */
+
 public class Pelicula extends Catalogo{
 	
+	private int ID;
 	private String Nombre;
 	private String AnyoEstreno;
 	
@@ -13,6 +20,14 @@ public class Pelicula extends Catalogo{
 		super();
 		Nombre = nombre;
 		AnyoEstreno = anyoEstreno;
+	}
+
+	public int getID() {
+		return ID;
+	}
+
+	public void setID(int iD) {
+		ID = iD;
 	}
 
 	public String getNombre() {

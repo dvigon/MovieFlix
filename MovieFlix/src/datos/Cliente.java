@@ -1,9 +1,16 @@
 package datos;
 
+/**
+ * Clase Cliente
+ * @author David Vigón
+ * Fecha: 19-5-2020
+ */
+
 import java.util.Date;
 
 public class Cliente {
 
+	private int ID;
 	private String NombreCompleto;
 	private String CiudadResidencia;
 	private Date FechaNacimiento;
@@ -19,6 +26,15 @@ public class Cliente {
 		FechaNacimiento = fechaNacimiento;
 	}
 
+
+	public int getID() {
+		return ID;
+	}
+
+	public void setID(int iD) {
+		ID = iD;
+	}
+	
 	public String getNombreCompleto() {
 		return NombreCompleto;
 	}
