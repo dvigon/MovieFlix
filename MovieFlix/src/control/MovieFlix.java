@@ -9,7 +9,7 @@ package control;
 import herramientas.LeerDatos;
 import menu.Menu;
 
-class Servicio {
+class MovieFlix {
 
 	public void start() {
 
@@ -63,7 +63,6 @@ class Servicio {
 	
 			case 6:
 				// Muestra el listado de todos los clientes dados de alta.
-				//ImplementacionCliente.ListadoCompleto();
 				break;
 	
 			case 7:
