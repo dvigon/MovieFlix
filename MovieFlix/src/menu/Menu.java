@@ -11,9 +11,9 @@ import herramientas.LeerDatos;
 public class Menu {
 	
 	public static void MostrarMenu() {
-		
-		System.out.println("Bienvenido a MovieFlix");
-		
+
+        System.out.println("************************************************");
+		System.out.println("*            Bienvenido a MovieFlix            *");
         System.out.println("************************************************");
 		System.out.println("  Opción 1: Mostrar listado de películas completo.");			// Muestra todas las películas de todos los catálogos.
 		System.out.println("  Opción 2: Mostrar listado de películas por catálogo.");		// Pide al usuario el catálogo que desea consultar y muestra el listado de películas que contiene.
