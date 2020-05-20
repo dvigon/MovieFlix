@@ -1,7 +1,5 @@
 package control;
 
-import datos.Pelicula;
-
 /**
  * Selección de servicios 
  * @author David Vigón
@@ -10,10 +8,8 @@ import datos.Pelicula;
 
 import herramientas.LeerDatos;
 import menu.Menu;
-import servicios.ImplementacionPelicula;
-import servicios.ImplementacionServicios;
 
-public class Servicio {
+class Servicio {
 
 	public void start() {
 
@@ -40,34 +36,34 @@ public class Servicio {
 		switch ( LeerDatos.leerInteger("Introduce una opción >> ") ) {
 			case 1:
 				// Muestra todas las películas de todos los catálogos.
-				//Pelicula.ListadoCompleto();
+				//ImplementacionPelicula.ListadoCompleto();
 				break;
 	
 			case 2:
 				// Pide al usuario el nombre del catálogo que desea consultar y muestra su listado de películas.
 				LeerDatos.leerString("\nIntroduce el nombre de la categoría: ");
-				//Pelicula.ListadoPorCatalogo();
+				//ImplementacionPelicula.ListadoPorCatalogo();
 				break;
 	
 			case 3:
 				// Muestra las películas más vistas de cada catálogo.
-				//Pelicula.ListadoMasVistas();
+				//ImplementacionPelicula.ListadoMasVistas();
 				break;
 	
 			case 4:
 				// Muestra las películas más valoradas de cada catálogo.
-				//Pelicula.ListadoMasValoradas();
+				//ImplementacionPelicula.ListadoMasValoradas();
 				break;
 	
 			case 5:
 				// Pide un usuario y muestra las películas que puede ver con su paquete contratado.
 				LeerDatos.leerString("\nIntroduce el nombre completo del cliente: ");
-				//Pelicula.ListadoContratado();
+				//ImplementacionPelicula.ListadoContratado();
 				break;
 	
 			case 6:
 				// Muestra el listado de todos los clientes dados de alta.
-				//Cliente.ListadoCompleto();
+				//ImplementacionCliente.ListadoCompleto();
 				break;
 	
 			case 7:
@@ -98,7 +94,7 @@ public class Servicio {
 				break;
 			case 13:
 				// Pide al usuario el nombre de la película, el año de estreno y la categoría, y la da de alta.
-				ImplementacionPelicula.AltaPelicula();	
+				//ImplementacionPelicula.AltaPelicula();	
 				break;
 			case 14:
 				// Pide al usuario el nombre de la película y la da de baja.
