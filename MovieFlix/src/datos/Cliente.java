@@ -12,17 +12,24 @@ public class Cliente {
 
 	private int IdCliente;
 	private String NombreCompleto;
-	private String CiudadResidencia;
 	private Date FechaNacimiento;
 	
 	public Cliente() {
 		super();
+	}	
+		
+	public Cliente(int idCliente, String nombreCompleto, Date fechaNacimiento) {
+		super();
+		IdCliente = idCliente;
+		NombreCompleto = nombreCompleto;
+		FechaNacimiento = fechaNacimiento;
 	}
 
-	public Cliente(String nombreCompleto, String ciudadResidencia, Date fechaNacimiento) {
+
+
+	public Cliente(String nombreCompleto, Date fechaNacimiento) {
 		super();
 		NombreCompleto = nombreCompleto;
-		CiudadResidencia = ciudadResidencia;
 		FechaNacimiento = fechaNacimiento;
 	}
 	
@@ -42,14 +49,6 @@ public class Cliente {
 		NombreCompleto = nombreCompleto;
 	}
 
-	public String getCiudadResidencia() {
-		return CiudadResidencia;
-	}
-
-	public void setCiudadResidencia(String ciudadResidencia) {
-		CiudadResidencia = ciudadResidencia;
-	}
-
 	public Date getFechaNacimiento() {
 		return FechaNacimiento;
 	}
@@ -62,7 +61,6 @@ public class Cliente {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((CiudadResidencia == null) ? 0 : CiudadResidencia.hashCode());
 		result = prime * result + ((FechaNacimiento == null) ? 0 : FechaNacimiento.hashCode());
 		result = prime * result + IdCliente;
 		result = prime * result + ((NombreCompleto == null) ? 0 : NombreCompleto.hashCode());
@@ -78,11 +76,6 @@ public class Cliente {
 		if (getClass() != obj.getClass())
 			return false;
 		Cliente other = (Cliente) obj;
-		if (CiudadResidencia == null) {
-			if (other.CiudadResidencia != null)
-				return false;
-		} else if (!CiudadResidencia.equals(other.CiudadResidencia))
-			return false;
 		if (FechaNacimiento == null) {
 			if (other.FechaNacimiento != null)
 				return false;
@@ -100,8 +93,7 @@ public class Cliente {
 
 	@Override
 	public String toString() {
-		return "Cliente [IdCliente=" + IdCliente + ", NombreCompleto=" + NombreCompleto + ", CiudadResidencia="
-				+ CiudadResidencia + ", FechaNacimiento=" + FechaNacimiento + "]";
+		return "Cliente [NombreCompleto=" + NombreCompleto + ", FechaRegistro=" + FechaNacimiento + "]";
 	}
 	
 }
