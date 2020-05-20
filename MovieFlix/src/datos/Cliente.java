@@ -52,7 +52,7 @@ public class Cliente {
 	}
 
 	public void setFechaRegistro(Date FechaRegistro) {
-		FechaRegistro = FechaRegistro;
+		this.FechaRegistro = FechaRegistro;
 	}
 
 	@Override
