@@ -12,25 +12,23 @@ public class Cliente {
 
 	private int IdCliente;
 	private String NombreCompleto;
-	private Date FechaNacimiento;
+	private Date FechaRegistro;
 	
 	public Cliente() {
 		super();
 	}	
 		
-	public Cliente(int idCliente, String nombreCompleto, Date fechaNacimiento) {
+	public Cliente(int idCliente, String nombreCompleto, Date FechaRegistro) {
 		super();
 		IdCliente = idCliente;
 		NombreCompleto = nombreCompleto;
-		FechaNacimiento = fechaNacimiento;
+		this.FechaRegistro = FechaRegistro;
 	}
 
-
-
-	public Cliente(String nombreCompleto, Date fechaNacimiento) {
+	public Cliente(String nombreCompleto, Date FechaRegistro) {
 		super();
 		NombreCompleto = nombreCompleto;
-		FechaNacimiento = fechaNacimiento;
+		this.FechaRegistro = FechaRegistro;
 	}
 	
 	public int getIdCliente() {
@@ -49,19 +47,19 @@ public class Cliente {
 		NombreCompleto = nombreCompleto;
 	}
 
-	public Date getFechaNacimiento() {
-		return FechaNacimiento;
+	public Date getFechaRegistro() {
+		return FechaRegistro;
 	}
 
-	public void setFechaNacimiento(Date fechaNacimiento) {
-		FechaNacimiento = fechaNacimiento;
+	public void setFechaRegistro(Date FechaRegistro) {
+		FechaRegistro = FechaRegistro;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((FechaNacimiento == null) ? 0 : FechaNacimiento.hashCode());
+		result = prime * result + ((FechaRegistro == null) ? 0 : FechaRegistro.hashCode());
 		result = prime * result + IdCliente;
 		result = prime * result + ((NombreCompleto == null) ? 0 : NombreCompleto.hashCode());
 		return result;
@@ -76,10 +74,10 @@ public class Cliente {
 		if (getClass() != obj.getClass())
 			return false;
 		Cliente other = (Cliente) obj;
-		if (FechaNacimiento == null) {
-			if (other.FechaNacimiento != null)
+		if (FechaRegistro == null) {
+			if (other.FechaRegistro != null)
 				return false;
-		} else if (!FechaNacimiento.equals(other.FechaNacimiento))
+		} else if (!FechaRegistro.equals(other.FechaRegistro))
 			return false;
 		if (IdCliente != other.IdCliente)
 			return false;
@@ -93,7 +91,7 @@ public class Cliente {
 
 	@Override
 	public String toString() {
-		return "Cliente [NombreCompleto=" + NombreCompleto + ", FechaRegistro=" + FechaNacimiento + "]";
+		return "Cliente [NombreCompleto=" + NombreCompleto + ", FechaRegistro=" + FechaRegistro + "]";
 	}
 	
 }
