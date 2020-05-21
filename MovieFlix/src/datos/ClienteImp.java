@@ -169,10 +169,7 @@ public class ClienteImp implements InterfazCliente{
 			ResultSet rs = stmt.executeQuery(query);
 			ArrayList <String> lista = new ArrayList<>();
 		while (rs.next()) {
-			//lista.add(rs.getString("nombre"));
-			//lista.add(rs.getString("tipoGenero"));
 			System.out.println("Cliente: "+rs.getString("nombre")+", genero al que esta suscrito: "+rs.getString("tipoGenero"));
-			//System.out.println(lista);
 		}
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
