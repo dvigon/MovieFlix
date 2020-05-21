@@ -19,5 +19,7 @@ public interface ImplementacionPelicula {
 	public void darBaja();	
 
 	public Pelicula encontrar(int id);
+
+	public void modificacion();
 	
 }

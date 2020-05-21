@@ -117,7 +117,7 @@ class MovieFlix {
 				break;
 			case 15:
 				// Pide al usuario el nombre de la película a modificar, cuando lo encuentra, pide el nombre de la película, año de estreno y categoria a la que pertenece.
-
+				implementacionPelicula.modificacion();
 				break;
 			case 16:
 				// Cierra la sesión y finaliza el programa

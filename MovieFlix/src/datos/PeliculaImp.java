@@ -5,6 +5,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Date;
 
 import herramientas.Conexion;
 import herramientas.LeerDatos;
@@ -68,7 +69,7 @@ public class PeliculaImp implements InterfazPelicula{
 
 	}
 
-	//metodo para dar de baja a un cliente y eliminarlo de la bd
+	// Método para dar de baja a una película
 	@Override
 	public void darBaja() {
 		
@@ -88,7 +89,7 @@ public class PeliculaImp implements InterfazPelicula{
 		}
 	}
 
-	//metodo para buscar clientes mediante su identificador
+	//metodo para buscar películas mediante su ID
 	@Override
 	public Pelicula encontrar(int id) {
 
@@ -108,6 +109,24 @@ public class PeliculaImp implements InterfazPelicula{
 		}
 	}
 
+	//metodo para modificar parametros de una película
+	@Override
+	public void modificacion() {
+		int idPelicula = LeerDatos.leerInteger("Introduzca el ID de la película a modificar: ");
+		String titulo = LeerDatos.leerString("Introduzca el nuevo titulo de la película: ");
+		int anyoEstreno = LeerDatos.leerInteger("Introduzca el nuevo año de estreno: ");
+		int idGenero = LeerDatos.leerInteger("Introduzca el nuevo ID del género: ");
+
+		try (Statement stmt = conexionBBDD.createStatement()) {			
+			String query = "UPDATE pelicula SET titulo='" + titulo + "', anyoEstreno='" + anyoEstreno +  "', idGenero='" + idGenero + "' WHERE idPelicula=" + idPelicula;
+		if (stmt.executeUpdate(query) != 1) {
+				System.out.println("Error al modificar el cliente");
+			}
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		}
+	}	
+	
 	public void close() {
 		try {
 			conexionBBDD.close();

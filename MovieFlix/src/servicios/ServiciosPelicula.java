@@ -31,4 +31,8 @@ public class ServiciosPelicula implements ImplementacionPelicula{
 		return datos.encontrar(id);
 	}
 	
+	@Override
+	public void modificacion() {
+		datos.modificacion();
+	}
 }
