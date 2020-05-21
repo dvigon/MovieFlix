@@ -66,7 +66,7 @@ public class CargarCSV {
 
 		try (Statement stmt = con.createStatement() ) {
 
-			String query = "INSERT INTO Peliculas ( Nombre, AnyoEstreno, Genero )  VALUES (" + Titulos + "," +  AñoEstreno + ", " + Genero + ")";
+			String query = "INSERT INTO Pelicula ( titulo, anyoEstreno )  VALUES (" + Titulos + "," +  AñoEstreno + ", " + Genero + ")";
 			if (stmt.executeUpdate(query) != 1) {
 				System.out.println("Error al insertar las películas");  
 			}
@@ -75,5 +75,5 @@ public class CargarCSV {
 		}
 		
 	}
-
+	
 }
