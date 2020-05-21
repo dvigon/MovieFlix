@@ -108,6 +108,7 @@ class MovieFlix {
 				break;
 			case 13:
 				// Pide al usuario el nombre de la película, el año de estreno y la categoría, y la da de alta.
+				implementacionPelicula.darAlta();
 
 				break;
 			case 14:
