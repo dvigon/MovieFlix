@@ -30,7 +30,12 @@ public class Cliente {
 		NombreCompleto = nombreCompleto;
 		this.FechaRegistro = FechaRegistro;
 	}
-	
+		
+	public Cliente(String nombreCompleto) {
+		super();
+		NombreCompleto = nombreCompleto;
+	}
+
 	public int getIdCliente() {
 		return IdCliente;
 	}

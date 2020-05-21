@@ -124,7 +124,66 @@ public class ClienteImp implements InterfazCliente{
 			System.out.println(cli+"\n");
 		}
 	}
-
+	
+	@Override
+	public void suscripcion(int id, String nombre){
+		Cliente cli=encontrar(id);
+		Catalogo nombreg = encontrarCatalogo(nombre);
+		if(cli==null){
+			System.out.println("El cliente con este id: "+id+"no existe");
+		}
+		if(nombre==null){
+			System.out.println("El genero con este nombre: "+nombre+"no existe");
+		}
+		try (Statement stmt = con.createStatement()) {
+			String query = "insert into Genero values(null,'"+id+"',"+ nombreg.getCategoria()+"')";
+		if (stmt.executeUpdate(query) != 1) {
+			System.out.println("Error al suscribir al cliente");
+			}
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	@Override
+	public Catalogo encontrarCatalogo(String nombre){
+		try(Statement stmt=con.createStatement()){
+			String query ="select * from Genero where tipoGenero ="+nombre+"";
+					ResultSet rs =stmt.executeQuery(query);
+		if (!rs.next()) {
+			return null;
+		}
+			return (new Catalogo(rs.getString("tipoGenero")));
+		}
+		catch(Exception e){
+			System.out.println(e.getMessage());  
+			return null;
+		}
+	}
+	
+	@Override
+	public Cliente[] listaClienteCatalogo(){
+		try (Statement stmt = con.createStatement()) {
+			String query = "select c.nombre, g.tipoGenero from Cliente c, inner join Suscripcion s on c.idCliente = s.idCliente inner join Genero g on s.idGenero  = g.idGenero";
+			ResultSet rs = stmt.executeQuery(query);
+			ArrayList<Cliente> clientes = new ArrayList<>();
+		while (rs.next()) {
+			//clientes.add(rs.getString("nombre"));
+		}
+			return clientes.toArray(new Cliente[0]);
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+			return null;
+		}
+	} 
+	
+	@Override
+	public void listaCliCatalogo() {
+		Cliente[] lista = this.listaClienteCatalogo();
+		for(Cliente cli:lista) {
+			System.out.println(cli+"\n");
+		}
+	}
 
 	//@Override
 	public void close() {

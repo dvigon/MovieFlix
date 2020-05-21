@@ -16,6 +16,10 @@ public interface InterfazCliente {
 	public Cliente[] listaClientes();
 	public void darAlta();
 	public void lista();	
-
+	
+	public void suscripcion(int id, String nombre);
+	public Catalogo encontrarCatalogo(String nombre);
+	public Cliente[] listaClienteCatalogo();
+	public void listaCliCatalogo();
 	
 }
