@@ -3,7 +3,9 @@ package control;
 import herramientas.LeerDatos;
 import menu.Menu;
 import servicios.ImplementacionCliente;
+import servicios.ImplementacionPelicula;
 import servicios.ServiciosCliente;
+import servicios.ServiciosPelicula;
 
 /**
  * Selección de servicios 
@@ -13,7 +15,8 @@ import servicios.ServiciosCliente;
 
 class MovieFlix {
 	
-	ImplementacionCliente impcli=new ServiciosCliente();
+	ImplementacionCliente impcli = new ServiciosCliente();
+	ImplementacionPelicula implementacionPelicula = new ServiciosPelicula();
 	
 	public void iniciar() {
 
@@ -43,7 +46,7 @@ class MovieFlix {
 		switch ( LeerDatos.leerInteger("Introduce una opción >> ") ) {
 			case 1:
 				// Muestra todas las películas de todos los catálogos.
-				
+				implementacionPelicula.ListadoCompleto();
 				break;
 	
 			case 2:

@@ -23,7 +23,7 @@ public class PeliculaImp implements InterfazPelicula{
 		
 		try (Statement declaracion = conexionBBDD.createStatement()) {
 			
-			String query = "SELECT * FROM Peliculas";
+			String query = "SELECT * FROM Pelicula";
 			ResultSet resultado = declaracion.executeQuery(query);
 			ArrayList<Pelicula> Peliculas = new ArrayList<>();
 			
