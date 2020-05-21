@@ -113,7 +113,7 @@ class MovieFlix {
 				break;
 			case 14:
 				// Pide al usuario el nombre de la película y la da de baja.
-				
+				implementacionPelicula.darBaja();
 				break;
 			case 15:
 				// Pide al usuario el nombre de la película a modificar, cuando lo encuentra, pide el nombre de la película, año de estreno y categoria a la que pertenece.
