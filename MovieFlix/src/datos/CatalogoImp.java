@@ -107,9 +107,9 @@ public class CatalogoImp implements InterfazCatalogo{
 
 	@Override
 	public void ListadoCompleto() {
-		Catalogo[] catalogo = this.listaCatalogo();
+		Catalogo[] catalogo=this.listaCatalogo();
 		for(Catalogo c:catalogo) {
-			//System.out.println(catalogo.toString()+"\n");
+			//System.out.println(catalogo+"\n");
 		}
 	}
 	
