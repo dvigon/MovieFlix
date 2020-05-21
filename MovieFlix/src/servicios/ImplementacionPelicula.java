@@ -9,6 +9,8 @@ package servicios;
 
 public interface ImplementacionPelicula {
 
-	public void listadoCompleto();	
+	public void listadoCompleto();
+
+	public void darAlta();	
 	
 }

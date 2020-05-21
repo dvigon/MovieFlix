@@ -7,6 +7,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 import herramientas.Conexion;
+import herramientas.LeerDatos;
 
 /*
  * Métodos para la gestión de peliculas: Alta, Baja, Listado
@@ -18,7 +19,6 @@ public class PeliculaImp implements InterfazPelicula{
 
 	private Connection conexionBBDD = new Conexion().getConnection();
 
-	//metodo que recoge en un array los clientes que hay
 	@Override
 	public Pelicula[] listaPeliculas(){
 
@@ -48,7 +48,26 @@ public class PeliculaImp implements InterfazPelicula{
 		}
 	}
 
+	@Override
+	public void darAlta() {		
+		
+		String titulo = LeerDatos.leerString("Introduzca el nombre de la película: ");
+		int anyoEstreno = LeerDatos.leerInteger("Introduzca el año de estreno: ");
+		int idGenero = LeerDatos.leerInteger("Introduzca el id de la categoria: ");
+		
+		try (Statement stmt = conexionBBDD.createStatement()) {
+			
+			String query = "INSERT INTO pelicula VALUES (null, '" + titulo + "','" + anyoEstreno + "','" + idGenero + "')";
 
+			if (stmt.executeUpdate(query) != 1) 
+				System.out.println("Error al insertar nuevo cliente");  
+			
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());         
+		}
+		
+	}
+	
 	public void close() {
 		try {
 			conexionBBDD.close();
@@ -56,4 +75,5 @@ public class PeliculaImp implements InterfazPelicula{
 			System.out.println("Excepcion al cerrar la bd: " + e.getMessage());
 		}
 	}
+
 }

@@ -14,4 +14,9 @@ public class ServiciosPelicula implements ImplementacionPelicula{
 		datos.listadoCompleto();
 	}
 
+	@Override
+	public void darAlta() {
+		datos.darAlta();
+	}
+
 }
