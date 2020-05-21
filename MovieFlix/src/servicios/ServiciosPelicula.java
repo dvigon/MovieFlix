@@ -1,10 +1,8 @@
 package servicios;
 
-import datos.Catalogo;
-import datos.Cliente;
-import datos.InterfazPelicula;
 import datos.Pelicula;
 import datos.PeliculaImp;
+import datos.InterfazPelicula;
 
 public class ServiciosPelicula implements ImplementacionPelicula{
 	
@@ -12,45 +10,8 @@ public class ServiciosPelicula implements ImplementacionPelicula{
 	private InterfazPelicula datos = new PeliculaImp();
 	
 	@Override
-	public void ListadoCompleto() {
-		datos.ListadoCompleto();
+	public void listadoCompleto() {
+		datos.listadoCompleto();
 	}
-
-	@Override
-	public void ListadoPorCatalogo(Catalogo categoria) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void AltaPelicula() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void AltaPelicula(Cliente cliente) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void BajaPelicula() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void BajaPelicula(Pelicula pelicula) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void ModificarPelicula(Cliente pelicula) {
-		// TODO Auto-generated method stub
-		
-	}
-
 
 }

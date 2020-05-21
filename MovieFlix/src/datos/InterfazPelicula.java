@@ -2,7 +2,8 @@ package datos;
 
 public interface InterfazPelicula {
 
-	Pelicula[] ListadoCompleto();
+	public void listadoCompleto();	
+	public Pelicula[] listaPeliculas();
 
 }
 

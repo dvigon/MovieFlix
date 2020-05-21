@@ -17,27 +17,37 @@ import herramientas.Conexion;
 public class PeliculaImp implements InterfazPelicula{
 
 	private Connection conexionBBDD = new Conexion().getConnection();
-	
+
+	//metodo que recoge en un array los clientes que hay
 	@Override
-	public Pelicula[] ListadoCompleto(){
-		
-		try (Statement declaracion = conexionBBDD.createStatement()) {
-			
+	public Pelicula[] listaPeliculas(){
+
+		try (Statement stmt = conexionBBDD.createStatement()) {
+
 			String query = "SELECT * FROM Pelicula";
-			ResultSet resultado = declaracion.executeQuery(query);
-			ArrayList<Pelicula> Peliculas = new ArrayList<>();
-			
-			while ( resultado.next() ) {
-				Peliculas.add( new Pelicula( resultado.getInt("idPelicula"), resultado.getString("titulo"), resultado.getInt("anyoEstreno") ) );
-			}
-			
-			return Peliculas.toArray(new Pelicula[0]);
-			
+			ResultSet rs = stmt.executeQuery(query);
+			ArrayList<Pelicula> peliculas = new ArrayList<>();
+
+			while (rs.next()) 
+				peliculas.add(new Pelicula( rs.getInt("idPelicula"), rs.getString("titulo"), rs.getInt("anyoEstreno")) );
+
+			return peliculas.toArray(new Pelicula[0]);
+
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
 			return null;
 		}
+
 	}
+
+	@Override
+	public void listadoCompleto() {
+		Pelicula[] lista = this.listaPeliculas();
+		for(Pelicula peliculas : lista) {
+			System.out.println(peliculas + "\n");
+		}
+	}
+
 
 	public void close() {
 		try {
@@ -46,5 +56,4 @@ public class PeliculaImp implements InterfazPelicula{
 			System.out.println("Excepcion al cerrar la bd: " + e.getMessage());
 		}
 	}
-
 }

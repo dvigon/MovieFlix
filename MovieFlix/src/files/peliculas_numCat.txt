@@ -7,7 +7,7 @@ Forrest Gump,1994,4
 Casablanca,1942,2
 Amelia,2001,2
 El indomable Will Hunting,1997,2
-El Rey Le√≥n,1994,5
+El Rey LeÛn,1994,5
 Coco,2017,5
 La princesa Mononoke,1997,5
 Up,2009,5
@@ -23,8 +23,8 @@ El secreto de tus ojos,2009,2
 Seven,1995,6
 El silencio de los corderos,1991,6
 Memento,2000,6
-El se√±or de los anillos: El retorno del rey,2003,3
-Los siete samur√°is,1954,3
+El seÒor de los anillos: El retorno del rey,2003,3
+Los siete samur·is,1954,3
 Interstellar,2014,3
 La guerra de las galaxias,1997,3
 Gladiator,2000,3
@@ -32,14 +32,14 @@ El caso Bourne,2002,1
 La noche de los cristales rotos,1991,1
 Arma letal,1987,1
 La jungla de cristal,1988,1
-El padrino,1972,1 
-Ciudad de Dios,2002,1 
+El padrino,1972,1
+Ciudad de Dios,2002,1
 Uno de los nuestros,1990,1
 Pulp Fiction,1994,1
 Avengers: Infinity War,2018,3
-Jurassic World: Fallen Kingdom,2018,3 
-Venom,2018,3 
-Avatar,2009,3 
+Jurassic World: Fallen Kingdom,2018,3
+Venom,2018,3
+Avatar,2009,3
 Deadpool,2016,4
 Un Lugar tranquilo,2018,6
 Lo imposible,2012,6
@@ -70,8 +70,8 @@ Postdata: Te Quiero,2007,2
 Pretty Woman,1990,2
 Juego de Ladrones. El atraco perfecto,2018,1
 La isla siniestra,2010,1
-Ralph Rompe internet,2018,5 
-Los increibles ,2004,5 
+Ralph Rompe internet,2018,5
+Los increibles ,2004,5
 Los intocables de Eliot Ness,1987,1
 Bobby Z,2007,1
 Deadpool,2016,4
