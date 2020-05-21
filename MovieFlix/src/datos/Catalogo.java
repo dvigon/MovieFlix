@@ -18,6 +18,11 @@ public class Catalogo {
 	public Catalogo(String categoria) {
 		super();
 		Categoria = categoria;
+	}		
+
+	public Catalogo(int idCatalogo) {
+		super();
+		IdCatalogo = idCatalogo;
 	}
 
 	public Catalogo(int idCatalogo, String categoria) {

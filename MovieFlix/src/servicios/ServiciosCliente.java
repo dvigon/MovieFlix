@@ -1,5 +1,6 @@
 package servicios;
 
+import datos.Catalogo;
 import datos.Cliente;
 import datos.ClienteImp;
 import datos.InterfazCliente;
@@ -43,6 +44,25 @@ public class ServiciosCliente implements ImplementacionCliente{
 	public void lista() {
 		datos.lista();
 	}
-
+	
+	@Override
+	public void suscripcion(int id, int idcat) {
+		datos.suscripcion(id, idcat);
+	}
+	
+	@Override
+	public Catalogo encontrarCatalogo(int id) {
+		return datos.encontrarCatalogo(id);
+	}
+	
+	@Override
+	public Cliente[] listaClienteCatalogo() {
+		return datos.listaClienteCatalogo();
+	}
+	
+	@Override
+	public void listaCliCatalogo() {
+		datos.listaCliCatalogo();
+	}
 	
 }

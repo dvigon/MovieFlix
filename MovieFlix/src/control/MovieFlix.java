@@ -81,7 +81,9 @@ class MovieFlix {
 	
 			case 7:
 				// Pide al usuario el nombre del catálogo y muestra el listado los clientes que lo tienen contratado.
-
+				int idcli = LeerDatos.leerInteger("Dime el id del cliente a suscribir: ");
+				int idcat= LeerDatos.leerInteger("Dime el id del genero: ");
+				impcli.suscripcion(idcli, idcat);
 				break;
 	
 			case 8:

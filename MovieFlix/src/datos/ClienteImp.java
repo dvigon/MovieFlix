@@ -126,17 +126,18 @@ public class ClienteImp implements InterfazCliente{
 	}
 	
 	@Override
-	public void suscripcion(int id, String nombre){
+	public void suscripcion(int id, int idcat){
 		Cliente cli=encontrar(id);
-		Catalogo nombreg = encontrarCatalogo(nombre);
+		Catalogo cat = encontrarCatalogo(idcat);
 		if(cli==null){
 			System.out.println("El cliente con este id: "+id+"no existe");
 		}
-		if(nombre==null){
-			System.out.println("El genero con este nombre: "+nombre+"no existe");
+		if(cat==null){
+			System.out.println("El genero con este nombre: "+cat+"no existe");
 		}
 		try (Statement stmt = con.createStatement()) {
-			String query = "insert into Genero values(null,'"+id+"',"+ nombreg.getCategoria()+"')";
+			String query = "insert into Suscripcion values(null,'"+id+"','"+ cat +"')";
+			
 		if (stmt.executeUpdate(query) != 1) {
 			System.out.println("Error al suscribir al cliente");
 			}
@@ -146,14 +147,14 @@ public class ClienteImp implements InterfazCliente{
 	}
 	
 	@Override
-	public Catalogo encontrarCatalogo(String nombre){
+	public Catalogo encontrarCatalogo(int id){
 		try(Statement stmt=con.createStatement()){
-			String query ="select * from Genero where tipoGenero ="+nombre+"";
+			String query ="select * from Genero where idGenero ='"+id+"'";
 					ResultSet rs =stmt.executeQuery(query);
 		if (!rs.next()) {
 			return null;
 		}
-			return (new Catalogo(rs.getString("tipoGenero")));
+			return (new Catalogo(rs.getInt("idGenero")));
 		}
 		catch(Exception e){
 			System.out.println(e.getMessage());  
@@ -168,7 +169,7 @@ public class ClienteImp implements InterfazCliente{
 			ResultSet rs = stmt.executeQuery(query);
 			ArrayList<Cliente> clientes = new ArrayList<>();
 		while (rs.next()) {
-			//clientes.add(rs.getString("nombre"));
+			clientes.add(new Cliente(rs.getString("nombre")));
 		}
 			return clientes.toArray(new Cliente[0]);
 		} catch (SQLException e) {

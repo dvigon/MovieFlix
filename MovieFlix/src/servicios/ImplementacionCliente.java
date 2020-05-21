@@ -1,5 +1,7 @@
 package servicios;
 
+import datos.Catalogo;
+
 /**
  * Implementación de los Clientes
  * @author David Vigón
@@ -19,5 +21,8 @@ public interface ImplementacionCliente {
 	public void darAlta();
 	public void lista();	
 
-	
+	public void suscripcion(int id, int idcat);
+	public Catalogo encontrarCatalogo(int id);
+	public Cliente[] listaClienteCatalogo();
+	public void listaCliCatalogo();
 }
