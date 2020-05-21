@@ -8,8 +8,8 @@ public interface InterfazCatalogo {
 	public void modificacionCatalogo(int id);
 	public void bajaCatalogo(int id);
 	public Catalogo encontrarCatalogo(int id);
-	public Catalogo[] listaCatalogo();
 	public void darAltaCatalogo();
 	public void ListadoCompleto();
+	Catalogo[] listaCatalogos();
 
 }

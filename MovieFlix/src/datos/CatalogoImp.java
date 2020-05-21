@@ -87,29 +87,33 @@ public class CatalogoImp implements InterfazCatalogo{
 			return null;
 		}
 	}
-	
+
 	@Override
-	public Catalogo[] listaCatalogo() {
+	public Catalogo[] listaCatalogos(){
+
 		try (Statement stmt = con.createStatement()) {
+
 			String query = "SELECT * FROM Genero";
 			ResultSet rs = stmt.executeQuery(query);
 			ArrayList<Catalogo> catalogos = new ArrayList<>();
-			while (rs.next()) {
+
+			while (rs.next()) 
 				catalogos.add(new Catalogo(rs.getInt("idGenero"), rs.getString("tipoGenero")));
-			}
-			System.out.println(catalogos+"\n");
+
 			return catalogos.toArray(new Catalogo[0]);
+
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
 			return null;
 		}
-	}
 
+	}
+	
 	@Override
 	public void ListadoCompleto() {
-		Catalogo[] catalogo=this.listaCatalogo();
-		for(Catalogo c:catalogo) {
-			//System.out.println(catalogo+"\n");
+		Catalogo[] lista_catalogos = this.listaCatalogos();
+		for(Catalogo catalogos : lista_catalogos) {
+			System.out.println( catalogos + "\n" );
 		}
 	}
 	
@@ -121,4 +125,5 @@ public class CatalogoImp implements InterfazCatalogo{
 			System.out.println("Excepcion al cerrar la bd: " + e.getMessage());
 		}
 	}
+
 }
