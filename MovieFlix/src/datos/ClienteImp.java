@@ -20,6 +20,22 @@ public class ClienteImp implements InterfazCliente{
 
 	private Connection con = new Conexion().getConnection();
 
+	
+	@Override
+	public void darAlta() {		
+		String NombreCompleto = LeerDatos.leerString("Introduzca el nombre del cliente: ");
+		Date fecha = new Date();			
+		try (Statement stmt = con.createStatement()) {
+			String query = "INSERT INTO Cliente VALUES (null, '" + NombreCompleto + "','" + new java.sql.Date(fecha.getTime()) +"')";
+			if (stmt.executeUpdate(query) != 1) {
+				System.out.println("Error al insertar nuevo cliente");  
+			}
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());         
+		}
+		
+	}
+
 	// Método para dar de alta a un cliente y añadirlo a la BBDD
 	@Override
 	public void alta(Cliente cli) {
@@ -35,22 +51,21 @@ public class ClienteImp implements InterfazCliente{
 		}
 		
 	}
-
+	
 	//metodo para modificar parametros de un cliente
 	@Override
-	public void modificacion(Cliente cli) {
+	public void modificacion(int id) {
+		String NombreCompleto = LeerDatos.leerString("Introduzca el nuevo nombre del cliente: ");
+		Date fecha = new Date();
 		try (Statement stmt = con.createStatement()) {
-			String query = "UPDATE Cliente "
-					+ "SET nombre='" + cli.getNombreCompleto() + "',"
-					+ "fechaRegistro='" + new java.sql.Date( cli.getFechaRegistro().getTime())
-					+ "WHERE idCliente=" + cli.getIdCliente();
-			if (stmt.executeUpdate(query) != 1) {
+			String query = "UPDATE Cliente SET nombre='" + NombreCompleto + "', fechaRegistro='" + new java.sql.Date(fecha.getTime())+"' WHERE idCliente=" + id;
+		if (stmt.executeUpdate(query) != 1) {
 				System.out.println("Error al modificar el cliente");
 			}
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
 		}
-	}
+	}	
 
 	//metodo para dar de baja a un cliente y eliminarlo de la bd
 	@Override
@@ -101,6 +116,15 @@ public class ClienteImp implements InterfazCliente{
 			return null;
 		}
 	}
+	
+	@Override
+	public void lista() {
+		Cliente[] lista = this.listaClientes();
+		for(Cliente cli:lista) {
+			System.out.println(cli+"\n");
+		}
+	}
+
 
 	//@Override
 	public void close() {

@@ -15,8 +15,8 @@ public class ServiciosCliente implements ImplementacionCliente{
 	}
 	
 	@Override
-	public void modificacion(Cliente cli) {
-		datos.modificacion(cli);
+	public void modificacion(int id) {
+		datos.modificacion(id);
 	}
 	
 	@Override
@@ -33,5 +33,16 @@ public class ServiciosCliente implements ImplementacionCliente{
 	public Cliente[] listaClientes() {
 		return datos.listaClientes();
 	}
+	
+	@Override
+	public void darAlta() {
+		datos.darAlta();
+	}
+	
+	@Override
+	public void lista() {
+		datos.lista();
+	}
+
 	
 }

@@ -27,6 +27,8 @@ public class CargarCSV {
 	String archivo = "src\\files\\peliculas_cat.txt";
 	String archivo2 = "src\\files\\peliculas_numCat.txt";
 	
+	private Connection con = new Conexion().getConnection();
+	
 	public void readFileAsString() throws IOException {
 
 		BufferedReader bufferLectura = new BufferedReader( new FileReader(archivo) );
@@ -62,7 +64,7 @@ public class CargarCSV {
 
 	public void cargarPeliculas() {
 
-		try (Statement stmt = conexion.createStatement() ) {
+		try (Statement stmt = con.createStatement() ) {
 
 			String query = "INSERT INTO Peliculas ( Nombre, AnyoEstreno, Genero )  VALUES (" + Titulos + "," +  AñoEstreno + ", " + Genero + ")";
 			if (stmt.executeUpdate(query) != 1) {

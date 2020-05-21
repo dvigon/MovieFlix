@@ -91,7 +91,9 @@ public class Cliente {
 
 	@Override
 	public String toString() {
-		return "Cliente [NombreCompleto=" + NombreCompleto + ", FechaRegistro=" + FechaRegistro + "]";
+		
+		return "Cliente: IdCliente = "+IdCliente+", NombreCompleto = " + NombreCompleto + ", FechaRegistro = " + FechaRegistro + "";
+	
 	}
 	
 }

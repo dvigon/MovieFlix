@@ -10,9 +10,12 @@ public interface InterfazCliente {
 
 	//Llamada a los metodos correspondientes segun las necesidades
 	public void alta(Cliente cli);
-	public void modificacion(Cliente cli);
+	public void modificacion(int id);
 	public void baja(int id);
 	public Cliente encontrar(int id);
 	public Cliente[] listaClientes();
+	public void darAlta();
+	public void lista();	
+
 	
 }
