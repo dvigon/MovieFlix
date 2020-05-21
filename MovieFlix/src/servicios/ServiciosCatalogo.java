@@ -30,11 +30,6 @@ public class ServiciosCatalogo implements ImplementacionCatalogo{
 	}
 
 	@Override
-	public Catalogo[] listaCatalogo() {
-		return datos.listaCatalogo();
-	}
-
-	@Override
 	public void darAltaCatalogo() {
 		datos.darAltaCatalogo();
 	}

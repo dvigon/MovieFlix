@@ -8,7 +8,6 @@ public interface ImplementacionCatalogo {
 	public void modificacionCatalogo(int id);
 	public void bajaCatalogo(int id);
 	public Catalogo encontrarCatalogo(int id);
-	public Catalogo[] listaCatalogo();
 	public void darAltaCatalogo();
 	public void ListadoCompleto();		// Lista todos los catálogos que hay en la base de datos
 	
