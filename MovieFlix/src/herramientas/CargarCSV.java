@@ -68,8 +68,8 @@ public class CargarCSV {
 		System.out.println( "Generos: "+ idGenero );
 	}
 	
-	public void mostrarPelicula() {
-		return "Titulos: "+ Titulo + "Años de estreno: "+ anyoEstreno + "Número de genero: "+ idGenero );
+	public String mostrarPelicula() {
+		return "Titulos: " + Titulo + "Años de estreno: " + anyoEstreno + "Número de genero: " + idGenero;
 	}
 
 }
