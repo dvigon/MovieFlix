@@ -68,7 +68,7 @@ class MovieFlix {
 	
 			case 6:
 				// Muestra el listado de todos los clientes dados de alta.
-
+				impcli.lista();
 				break;
 	
 			case 7:
