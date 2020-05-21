@@ -97,7 +97,7 @@ public class CatalogoImp implements InterfazCatalogo{
 			while (rs.next()) {
 				catalogos.add(new Catalogo(rs.getInt("idGenero"), rs.getString("tipoGenero")));
 			}
-			//System.out.println(catalogos+"\n");
+			System.out.println(catalogos+"\n");
 			return catalogos.toArray(new Catalogo[0]);
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
@@ -107,9 +107,9 @@ public class CatalogoImp implements InterfazCatalogo{
 
 	@Override
 	public void ListadoCompleto() {
-		Catalogo[] lista = this.listaCatalogo();
-		for(Catalogo cat:lista) {
-			System.out.println(lista+"\n");
+		Catalogo[] catalogo = this.listaCatalogo();
+		for(Catalogo c:catalogo) {
+			//System.out.println(catalogo.toString()+"\n");
 		}
 	}
 	

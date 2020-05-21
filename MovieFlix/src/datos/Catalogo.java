@@ -14,12 +14,11 @@ public class Catalogo {
 	public Catalogo() {
 		super();
 	}
-
+	
 	public Catalogo(String categoria) {
 		super();
-		setCategoria(categoria);
+		Categoria = categoria;
 	}
-	
 
 	public Catalogo(int idCatalogo, String categoria) {
 		super();
@@ -74,7 +73,7 @@ public class Catalogo {
 
 	@Override
 	public String toString() {
-		return "Catalogo: IdCatalogo=" + IdCatalogo + ", Categoria=" + Categoria + "";
+		return "Catalogo: IdCatalogo = " + IdCatalogo + ", Categoria = " + Categoria + " \n";
 	}
 	
 	
