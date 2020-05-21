@@ -46,7 +46,7 @@ class MovieFlix {
 		switch ( LeerDatos.leerInteger("Introduce una opción >> ") ) {
 			case 1:
 				// Muestra todas las películas de todos los catálogos.
-				implementacionPelicula.ListadoCompleto();
+				implementacionPelicula.listadoCompleto();
 				break;
 	
 			case 2:
