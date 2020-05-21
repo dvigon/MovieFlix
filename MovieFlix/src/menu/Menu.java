@@ -15,9 +15,9 @@ public class Menu {
 		System.out.println("*            Bienvenido a MovieFlix            *");
         System.out.println("************************************************");
 		System.out.println("  1:  Mostrar listado de películas completo.");			// Muestra todas las películas de todos los catálogos.
-		System.out.println("  2:  Mostrar listado de películas por catálogo.");		// Pide al usuario el nombre del catálogo que desea consultar y muestra su listado de películas.
-		System.out.println("  3:  Mostrar listado de películas más vistas.");		// Muestra las películas más vistas de cada catálogo.
-		System.out.println("  4:  Mostrar listado de películas más valoradas.");	// Muestra las películas más valoradas de cada catálogo.
+		System.out.println("  2:  Dar de alta un catálogo.");						// Pide al usuario dar de alta un nuevo catalogo.
+		System.out.println("  3:  Dar de baja un catágolo.");						// Pide al usuario dar de baja un catálogo existente.
+		System.out.println("  4:  Modificar un catálogo.");							// Pide al usuario modificar una categoria.
 		System.out.println("  5:  Mostrar listado de películas contratado.");		// Muestra las películas que puede ver el usuario con su paquete contratado.
 		System.out.println("  6:  Mostrar listado de clientes completo.");			// Muestra el listado de todos los clientes dados de alta.
 		System.out.println("  7:  Mostrar listado de clientes por catálogo.");		// Pide al usuario el nombre del catálogo y muestra el listado los clientes que lo tienen contratado.

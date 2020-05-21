@@ -47,7 +47,7 @@ public class CatalogoImp implements InterfazCatalogo{
 		try (Statement stmt = con.createStatement()) {
 			String query = "UPDATE Genero SET tipoGenero='" + NombreCompleto + "' WHERE idGenero=" + id;
 		if (stmt.executeUpdate(query) != 1) {
-				System.out.println("Error al modificar el cliente");
+				System.out.println("Error al modificar el catálogo");
 			}
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
@@ -60,10 +60,10 @@ public class CatalogoImp implements InterfazCatalogo{
 		// TODO Auto-generated method stub
 		Catalogo cat = encontrarCatalogo(id);
 		if (cat == null) {
-			System.out.println("El cliente con este id: "+id+"no existe");
+			System.out.println("El catálogo con este id: "+id+"no existe");
 		}
 		try (Statement stmt = con.createStatement()) {
-			String query = "DELETE FROM Genero WHERE idCliente=" + id;
+			String query = "DELETE FROM Genero WHERE idGenero=" + id;
 			if (stmt.executeUpdate(query) != 1) {
 				System.out.println("Error al eliminar el Genero");
 			}
@@ -90,14 +90,14 @@ public class CatalogoImp implements InterfazCatalogo{
 	
 	@Override
 	public Catalogo[] listaCatalogo() {
-		// TODO Auto-generated method stub
 		try (Statement stmt = con.createStatement()) {
-			String query = "SELECT * FROM genero";
+			String query = "SELECT * FROM Genero";
 			ResultSet rs = stmt.executeQuery(query);
 			ArrayList<Catalogo> catalogos = new ArrayList<>();
 			while (rs.next()) {
 				catalogos.add(new Catalogo(rs.getInt("idGenero"), rs.getString("tipoGenero")));
 			}
+			//System.out.println(catalogos+"\n");
 			return catalogos.toArray(new Catalogo[0]);
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
@@ -107,8 +107,10 @@ public class CatalogoImp implements InterfazCatalogo{
 
 	@Override
 	public void ListadoCompleto() {
-		// TODO Auto-generated method stub
-		
+		Catalogo[] lista = this.listaCatalogo();
+		for(Catalogo cat:lista) {
+			System.out.println(lista+"\n");
+		}
 	}
 	
 	// @Override

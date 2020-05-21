@@ -41,7 +41,7 @@ public class ServiciosCatalogo implements ImplementacionCatalogo{
 
 	@Override
 	public void ListadoCompleto() {
-		datos.listaCatalogo();
+		datos.ListadoCompleto();
 	}
 
 }

@@ -42,5 +42,41 @@ public class Catalogo {
 	public void setCategoria(String categoria) {
 		Categoria = categoria;
 	}
+	
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((Categoria == null) ? 0 : Categoria.hashCode());
+		result = prime * result + IdCatalogo;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Catalogo other = (Catalogo) obj;
+		if (Categoria == null) {
+			if (other.Categoria != null)
+				return false;
+		} else if (!Categoria.equals(other.Categoria))
+			return false;
+		if (IdCatalogo != other.IdCatalogo)
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Catalogo: IdCatalogo=" + IdCatalogo + ", Categoria=" + Categoria + "";
+	}
+	
+	
 
 }

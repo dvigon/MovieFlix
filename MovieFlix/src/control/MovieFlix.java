@@ -2,8 +2,10 @@ package control;
 
 import herramientas.LeerDatos;
 import menu.Menu;
+import servicios.ImplementacionCatalogo;
 import servicios.ImplementacionCliente;
 import servicios.ImplementacionPelicula;
+import servicios.ServiciosCatalogo;
 import servicios.ServiciosCliente;
 import servicios.ServiciosPelicula;
 
@@ -17,6 +19,7 @@ class MovieFlix {
 	
 	ImplementacionCliente impcli = new ServiciosCliente();
 	ImplementacionPelicula implementacionPelicula = new ServiciosPelicula();
+	ImplementacionCatalogo impCatalogo = new ServiciosCatalogo();
 	
 	public void iniciar() {
 
@@ -51,17 +54,19 @@ class MovieFlix {
 	
 			case 2:
 				// Pide al usuario el nombre del catálogo que desea consultar y muestra su listado de películas.
-
+				impCatalogo.darAltaCatalogo();
 				break;
 	
 			case 3:
 				// Muestra las películas más vistas de cada catálogo.
-
+				int bajacat = LeerDatos.leerInteger("Dime el id del catálogo a eliminar: ");
+				impCatalogo.bajaCatalogo(bajacat);
 				break;
 	
 			case 4:
 				// Muestra las películas más valoradas de cada catálogo.
-
+				int modificacat = LeerDatos.leerInteger("Dime el id del catálogo a modificar: ");
+				impCatalogo.modificacionCatalogo(modificacat);
 				break;
 	
 			case 5:
@@ -85,7 +90,7 @@ class MovieFlix {
 				break;
 			case 9:
 				// Muestra todos los catálogos disponibles.
-
+				impCatalogo.ListadoCompleto();
 				break;
 			case 10:
 				// Pide al usuario el nombre completo, fecha de nacimiento y lugar de residencia del cliente y lo da de alta.
