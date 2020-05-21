@@ -8,51 +8,52 @@ package datos;
 
 public class Pelicula extends Catalogo{
 	
-	private int IdPelicula;
-	private String Nombre;
-	private String AnyoEstreno;
+	private int idPelicula;
+	private String titulo;
+	private int anyoEstreno;
 	
 	public Pelicula() {
 		super();
 	}
 
-	public Pelicula(String nombre, String anyoEstreno) {
+	public Pelicula(int idPelicula, String titulo, int anyoEstreno) {
 		super();
-		Nombre = nombre;
-		AnyoEstreno = anyoEstreno;
+		this.idPelicula = idPelicula;
+		this.titulo = titulo;
+		this.anyoEstreno = anyoEstreno;
 	}
 
 	public int getIdPelicula() {
-		return IdPelicula;
+		return idPelicula;
 	}
 
 	public void setIdPelicula(int idPelicula) {
-		IdPelicula = idPelicula;
+		this.idPelicula = idPelicula;
 	}
 
-	public String getNombre() {
-		return Nombre;
+	public String getTitulo() {
+		return titulo;
 	}
 
-	public void setNombre(String nombre) {
-		Nombre = nombre;
+	public void setNombre(String titulo) {
+		this.titulo = titulo;
 	}
 
-	public String getAnyoEstreno() {
-		return AnyoEstreno;
+	public int getAnyoEstreno() {
+		return anyoEstreno;
 	}
 
-	public void setAnyoEstreno(String anyoEstreno) {
-		AnyoEstreno = anyoEstreno;
+	public void setAnyoEstreno(int anyoEstreno) {
+		this.anyoEstreno = anyoEstreno;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((AnyoEstreno == null) ? 0 : AnyoEstreno.hashCode());
-		result = prime * result + IdPelicula;
-		result = prime * result + ((Nombre == null) ? 0 : Nombre.hashCode());
+		result = prime * result + anyoEstreno;
+		result = prime * result + idPelicula;
+		result = prime * result + ((titulo == null) ? 0 : titulo.hashCode());
 		return result;
 	}
 
@@ -65,24 +66,21 @@ public class Pelicula extends Catalogo{
 		if (getClass() != obj.getClass())
 			return false;
 		Pelicula other = (Pelicula) obj;
-		if (AnyoEstreno == null) {
-			if (other.AnyoEstreno != null)
-				return false;
-		} else if (!AnyoEstreno.equals(other.AnyoEstreno))
+		if (anyoEstreno != other.anyoEstreno)
 			return false;
-		if (IdPelicula != other.IdPelicula)
+		if (idPelicula != other.idPelicula)
 			return false;
-		if (Nombre == null) {
-			if (other.Nombre != null)
+		if (titulo == null) {
+			if (other.titulo != null)
 				return false;
-		} else if (!Nombre.equals(other.Nombre))
+		} else if (!titulo.equals(other.titulo))
 			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "Pelicula [IdPelicula=" + IdPelicula + ", Nombre=" + Nombre + ", AnyoEstreno=" + AnyoEstreno + "]";
+		return "Pelicula [IdPelicula=" + idPelicula + ", Titulo=" + titulo + ", AnyoEstreno=" + anyoEstreno + "]";
 	}
 
 }
