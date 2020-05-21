@@ -1,15 +1,15 @@
-package servicios;
+package datos;
 
-import datos.Catalogo;
-
-public interface ImplementacionCatalogo {
-
+public interface InterfazCatalogo {
+	
+	//Llamada a los metodos correspondientes segun las necesidades
+	
 	public void altaCatalogo(Catalogo cat);
 	public void modificacionCatalogo(int id);
 	public void bajaCatalogo(int id);
 	public Catalogo encontrarCatalogo(int id);
 	public Catalogo[] listaCatalogo();
 	public void darAltaCatalogo();
-	public void ListadoCompleto();		// Lista todos los catálogos que hay en la base de datos
-	
+	public void ListadoCompleto();
+
 }
