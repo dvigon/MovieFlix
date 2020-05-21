@@ -19,6 +19,13 @@ public class Catalogo {
 		super();
 		setCategoria(categoria);
 	}
+	
+
+	public Catalogo(int idCatalogo, String categoria) {
+		super();
+		IdCatalogo = idCatalogo;
+		Categoria = categoria;
+	}
 
 	public int getIdCatalogo() {
 		return IdCatalogo;
