@@ -56,11 +56,6 @@ public class ServiciosCliente implements ImplementacionCliente{
 	}
 	
 	@Override
-	public Cliente[] listaClienteCatalogo() {
-		return datos.listaClienteCatalogo();
-	}
-	
-	@Override
 	public void listaCliCatalogo() {
 		datos.listaCliCatalogo();
 	}

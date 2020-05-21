@@ -20,7 +20,7 @@ public class Menu {
 		System.out.println("  4:  Modificar un catálogo.");							// Pide al usuario modificar una categoria.
 		System.out.println("  5:  Mostrar listado de películas contratado.");		// Muestra las películas que puede ver el usuario con su paquete contratado.
 		System.out.println("  6:  Mostrar listado de clientes completo.");			// Muestra el listado de todos los clientes dados de alta.
-		System.out.println("  7:  Mostrar listado de clientes por catálogo.");		// Pide al usuario el nombre del catálogo y muestra el listado los clientes que lo tienen contratado.
+		System.out.println("  7:  Suscripcion.");									// Pide al usuario el id y el genero para la suscripcion
 		System.out.println("  8:  Mostrar listado de clientes del catálogo.");		// Pide al usuario el nombre del catálogo que desea consultar y muestra su listado de clientes.
 		System.out.println("  9:  Mostrar listado de catálogos.");					// Muestra todos los catálogos disponibles.
 		System.out.println("  10: Dar de alta un usuario.");						// Pide al usuario el nombre completo, fecha de nacimiento y lo da de alta.

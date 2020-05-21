@@ -23,6 +23,5 @@ public interface ImplementacionCliente {
 
 	public void suscripcion(int id, int idcat);
 	public Catalogo encontrarCatalogo(int id);
-	public Cliente[] listaClienteCatalogo();
 	public void listaCliCatalogo();
 }

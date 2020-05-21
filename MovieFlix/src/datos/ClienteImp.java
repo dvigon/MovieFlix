@@ -133,10 +133,10 @@ public class ClienteImp implements InterfazCliente{
 			System.out.println("El cliente con este id: "+id+"no existe");
 		}
 		if(cat==null){
-			System.out.println("El genero con este nombre: "+cat+"no existe");
+			System.out.println("El genero con este id: "+cat+"no existe");
 		}
 		try (Statement stmt = con.createStatement()) {
-			String query = "insert into Suscripcion values(null,'"+id+"','"+ cat +"')";
+			String query = "insert into Suscripcion values(null,'"+id+"','"+ idcat +"')";
 			
 		if (stmt.executeUpdate(query) != 1) {
 			System.out.println("Error al suscribir al cliente");
@@ -163,26 +163,19 @@ public class ClienteImp implements InterfazCliente{
 	}
 	
 	@Override
-	public Cliente[] listaClienteCatalogo(){
+	public void listaCliCatalogo() {
 		try (Statement stmt = con.createStatement()) {
-			String query = "select c.nombre, g.tipoGenero from Cliente c, inner join Suscripcion s on c.idCliente = s.idCliente inner join Genero g on s.idGenero  = g.idGenero";
+			String query = "select c.nombre, g.tipoGenero from Cliente c, Genero g, Suscripcion s where c.idCliente=s.idCliente and s.idGenero=g.idGenero";
 			ResultSet rs = stmt.executeQuery(query);
-			ArrayList<Cliente> clientes = new ArrayList<>();
+			ArrayList <String> lista = new ArrayList<>();
 		while (rs.next()) {
-			clientes.add(new Cliente(rs.getString("nombre")));
+			//lista.add(rs.getString("nombre"));
+			//lista.add(rs.getString("tipoGenero"));
+			System.out.println("Cliente: "+rs.getString("nombre")+", genero al que esta suscrito: "+rs.getString("tipoGenero"));
+			//System.out.println(lista);
 		}
-			return clientes.toArray(new Cliente[0]);
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
-			return null;
-		}
-	} 
-	
-	@Override
-	public void listaCliCatalogo() {
-		Cliente[] lista = this.listaClienteCatalogo();
-		for(Cliente cli:lista) {
-			System.out.println(cli+"\n");
 		}
 	}
 

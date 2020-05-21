@@ -88,7 +88,7 @@ class MovieFlix {
 	
 			case 8:
 				// Pide al usuario el nombre del catálogo que desea consultar y muestra su listado de clientes.
-
+				impcli.listaCliCatalogo();
 				break;
 			case 9:
 				// Muestra todos los catálogos disponibles.
